@@ -7,7 +7,7 @@ Meteor.startup(function() {
     added: function(message) {
 
       if(Meteor.ClientCall._methods[message.method]) {
-        var result = Meteor.ClientCall._methods[message.method].apply(message.arguments);
+        var result = Meteor.ClientCall._methods[message.method].apply({}, message.arguments);
 
         setTimeout(function() {
           Meteor.call('meteor-clientCall-received', message._id, null, result);

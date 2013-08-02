@@ -56,9 +56,13 @@ Example:
 
 Server-side function for calling client-side methods.
 
+Optional callback receives two arguments: `error` and `result`, where result is the return value of the called method.
+
 Example:
 
-    Meteor.ClientCall.apply(receiver._id, 'chatMessage', [sender.name, sender.message]);
+    Meteor.ClientCall.apply(receiver._id, 'chatMessage', [sender.name, sender.message], function(error, result) {
+      console.log('CALLBACK', result);
+    });
 
 
     
