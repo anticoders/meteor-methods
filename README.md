@@ -4,6 +4,17 @@ CLIENT CALL
 
 Easily call client methods from server side.
 
+`Meteor.methods` give an easy way to call server code from client-side part of the application.
+This package allows the same for the other way around.
+
+The only important difference is the `setClientId` method that is necessary to set up connection.
+
+**Caution:**
+
+Currently, only `Meteor.ClientCall.apply` is implemented. `call` equivalent will be added soon.
+
+
+
 
 INSTALLATION
 ============
