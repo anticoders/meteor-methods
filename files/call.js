@@ -15,7 +15,7 @@ Meteor.ClientCall.apply = function(clientId, method, arguments, callback) {
     time: new Date().getTime(),
   });
 
-  if(callback) ClientCall._callbacks[messageId] = callback;
+  if(callback) Meteor.ClientCall._callbacks[messageId] = callback;
 };
 
 
@@ -23,7 +23,7 @@ Meteor.ClientCall.apply = function(clientId, method, arguments, callback) {
 Meteor.methods({
 
   'meteor-clientCall-received': function(messageId, error, result) {
-    Meteor.ClientCall.messages.remove(messageId);
+    Meteor.ClientCall._messages.remove(messageId);
     
     if(Meteor.ClientCall._callbacks[messageId]) {
       Meteor.ClientCall._callbacks[messageId].call(null, error, result);

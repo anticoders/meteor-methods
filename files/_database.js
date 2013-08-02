@@ -8,7 +8,7 @@
   arguments []
   time
 */
-Meteor.ClientCall.messages = new Meteor.Collection('meteor-clientCall-messages');
+Meteor.ClientCall._messages = new Meteor.Collection('meteor-clientCall-messages');
 
 
 

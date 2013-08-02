@@ -1,22 +1,22 @@
 
 // CLIENT ONLY
 
-ClientCall._clientIdDep = new Deps.Dependency();
+Meteor.ClientCall._clientIdDep = new Deps.Dependency();
 
-ClientCall._clientId = null;
+Meteor.ClientCall._clientId = null;
 
-ClientCall.setClientId = function(clientId) {
-  ClientCall._clientId = clientId;
-  ClientCall._clientIdDep.changed();
+Meteor.ClientCall.setClientId = function(clientId) {
+  Meteor.ClientCall._clientId = clientId;
+  Meteor.ClientCall._clientIdDep.changed();
 }
 
-ClientCall.getClientId = function() {
-  ClientCall._clientIdDep.depend();
-  return ClientCall._clientId;
+Meteor.ClientCall.getClientId = function() {
+  Meteor.ClientCall._clientIdDep.depend();
+  return Meteor.ClientCall._clientId;
 }
 
 Deps.autorun(function() {
-  Meteor.subscribe('meteor-clientCall-channel', ClientCall.getClientId());
+  Meteor.subscribe('meteor-clientCall-channel', Meteor.ClientCall.getClientId());
 });
 
 
