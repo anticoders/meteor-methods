@@ -1,0 +1,5 @@
+
+// BOTH SIDES
+
+Meteor.ClientCall = {};
+
