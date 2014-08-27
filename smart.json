@@ -1,9 +1,0 @@
-{
-  "name": "client-call",
-  "description": "Call client methods from the server",
-  "homepage": "https://github.com/subhog/meteor-client-call",
-  "author": "Hubert Orlik Grzesik",
-  "version": "0.2.0",
-  "git": "https://github.com/subhog/meteor-client-call.git",
-  "packages": {}
-}

@@ -1,18 +1,21 @@
 
 
 Package.describe({
-  summary: "Call client methods from the server"
+  name:     "anticoders:client-call",
+  version:  "0.3.0",
+  summary:  "Call client methods from the server",
+  git:      "https://github.com/anticoders/meteor-client-call.git",
 });
 
 
 
 Package.on_use(function (api, where) {
 
-  if(api.export) {
-    api.use('deps', ['client', 'server']);
-    api.use('mongo-livedata', ['client', 'server']);
-  }
-
+  api.versionsFrom('0.9.0');
+  
+  api.use('deps', ['client', 'server']);
+  api.use('mongo-livedata', ['client', 'server']);
+  
   api.add_files([
     'files/_.js',
     'files/_database.js',
