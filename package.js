@@ -1,10 +1,10 @@
 
 
 Package.describe({
-  name:     "anticoders:client-call",
-  version:  "0.3.0",
+  name:     "anti:methods",
+  version:  "0.4.0",
   summary:  "Call client methods from the server",
-  git:      "https://github.com/anticoders/meteor-client-call.git",
+  git:      "https://github.com/anticoders/meteor-methods.git",
 });
 
 

@@ -1,4 +1,4 @@
-CLIENT CALL
+AntiMethods
 ===========
 
 
@@ -13,7 +13,9 @@ The only important difference is the `setClientId` method that is necessary to s
 
 Currently, only `Meteor.ClientCall.apply` is implemented. `call` equivalent will be added soon.
 
+**Disclaimer**
 
+This package API will be slightly changed in the next few weeks to accomodate the changes in 0.9.0 version of Meteor.
 
 
 INSTALLATION
@@ -21,7 +23,7 @@ INSTALLATION
 
 In your Meteor.js app folder call
 
-    mrt add client-call
+    meteor add anti:methods
 
 
 
