@@ -1,3 +1,10 @@
+Notes for updating to Meteor 0.9.0
+----------------------------------
+
+This package is now called `anti:methods`.
+
+
+
 AntiMethods
 ===========
 
