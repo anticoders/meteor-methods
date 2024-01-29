@@ -1,5 +1,3 @@
-
-
 Package.describe({
   name:     "anti:methods",
   version:  "0.4.0",
@@ -9,38 +7,38 @@ Package.describe({
 
 
 
-Package.on_use(function (api, where) {
+Package.onUse(function(api, where) {
 
-  api.versionsFrom('0.9.0');
-  
-  api.use('deps', ['client', 'server']);
-  api.use('mongo-livedata', ['client', 'server']);
-  
-  api.add_files([
-    'files/_.js',
-    'files/_database.js',
+  api.versionsFrom('1.11.1')
+
+  api.use('check')
+  api.use('tracker', ['client', 'server'])
+  api.use('mongo-livedata', ['client', 'server'])
+
+  api.addFiles([
+      'files/_.js',
+      'files/_database.js',
   ], [
-    'client',
-    'server',
-  ]);
+      'client',
+      'server',
+  ])
 
-  api.add_files([
-    'files/publish.js',
-    'files/call.js',
-    'files/cleanup.js',
+  api.addFiles([
+      'files/publish.js',
+      'files/call.js',
+      'files/cleanup.js',
   ], [
-    'server',
-  ]);
+      'server',
+  ])
 
-  api.add_files([
-    'files/methods.js',
-    'files/subscribe.js',
-    'files/receive.js',
+  api.addFiles([
+      'files/methods.js',
+      'files/subscribe.js',
+      'files/receive.js',
   ], [
-    'client',
-  ]);
-
-});
+      'client',
+  ])
+})
 
 
 
